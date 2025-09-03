@@ -7,6 +7,7 @@ import connectDB from './config/db.js';
  
 import authRoutes from './routes/auth.routes.js'
 import loanRoutes from './routes/loan.routes.js';
+import fraudRoutes from './routes/fraud.route.js';
 
 // Load environment variables
 config();
@@ -22,6 +23,7 @@ app.use(cookieParser());
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/loan', loanRoutes);
+app.use('/api/fraud', fraudRoutes);
 
 // Start the server
 app.listen(PORT, () => {
