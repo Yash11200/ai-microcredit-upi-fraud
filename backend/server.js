@@ -6,6 +6,7 @@ import cookieParser from 'cookie-parser';
 import connectDB from './config/db.js';
  
 import authRoutes from './routes/auth.routes.js'
+import loanRoutes from './routes/loan.routes.js';
 
 // Load environment variables
 config();
@@ -20,6 +21,7 @@ app.use(cookieParser());
 
 // Routes
 app.use('/api/auth', authRoutes);
+app.use('/api/loan', loanRoutes);
 
 // Start the server
 app.listen(PORT, () => {
